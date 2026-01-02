@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder's Solution - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader"></div>
+        <p>Loading Builder's Solution...</p>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen active">
+        <div class="login-container">
+            <div class="logo-section">
+                <i class="fas fa-hammer"></i>
+                <h1>Builder's Solution</h1>
+                <p>Inventory & Sales Management</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Username</label>
+                    <input type="text" id="loginUsername" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-user-tag"></i> Role</label>
+                    <select id="loginRole" required>
+                        <option value="">Select Role</option>
+                        <option value="customer">Customer</option>
+                        <option value="staff">Sales Staff</option>
+                        <option value="manager">Manager</option>
+                        <option value="auditor">Auditor</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+            <div class="register-link">
+                <p>New customer? <a href="#" id="showRegister">Register here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Registration Screen -->
+    <div id="registerScreen" class="screen">
+        <div class="register-container">
+            <div class="header-section">
+                <button class="btn-back" id="backToLogin">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2>Customer Registration</h2>
+            </div>
+            <form id="registerForm" class="register-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="regPhone" required>
+                </div>
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="regUsername" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="login.js"></script>
+</body>
+</html>
